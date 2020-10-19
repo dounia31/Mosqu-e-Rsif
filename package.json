@@ -1,0 +1,53 @@
+{
+  "name": "myIdrissTour",
+  "version": "0.0.1",
+  "description": "",
+  "main": "www/index.html",
+  "scripts": {
+    "build": "npm run build-min",
+    "build-dist": "rimraf www/dist && mkdir www/dist && rollup -c",
+    "build-min": "npm run build-dist && uglifyjs www/dist/app.bundle.js -o www/dist/app.min.js -c -m ",
+    "watch": "rollup -c -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maachilyas/myIdrissTour.git",
+    "private": true
+  },
+  "keywords": [
+    "3d",
+    "gis",
+    "three",
+    "webgl",
+    "visualization"
+  ],
+  "author": "Maach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Maachilyas/myIdrissTour/issues"
+  },
+  "homepage": "https://github.com/Maachilyas/myIdrissTour#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.51.8",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-glsl": "^1.1.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-postcss": "^0.5.5",
+    "rollup-watch": "^4.3.1",
+    "uglify-js": "^3.1.10"
+  },
+  "dependencies": {
+    "cordova-android": "^7.0.0",
+    "es6-tween": "^4.1.0",
+    "three": "^0.88.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  }
+
+}
